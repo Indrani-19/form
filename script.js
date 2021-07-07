@@ -15,8 +15,8 @@ resetForm();
      formData["lastname"] = document.getElementById("lastname").value;
      formData["emailid"] = document.getElementById("emailid").value;
      formData["contactinfo"] = document.getElementById("contactinfo").value;
-     return formData
-
+      return formData
+      document.getElementById("onsubmit").value = "";
  }
 
  function insertNewRecord(data) {
@@ -33,6 +33,7 @@ resetForm();
      cell4.innerHTML = data.contactinfo;
      var cell5 = newRow.insertCell(4);
      cell5.innerHTML= '<a onClick=onEdit(this)> Edit</a> <a onClick=onDelete(this)>Delete</a>';
+     
 
 
  }
@@ -69,3 +70,4 @@ resetForm();
      resetForm();
  }
 }
+
