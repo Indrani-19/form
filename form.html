@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <title>
 FORM
@@ -10,9 +11,9 @@ FORM
         <table>
             <tr>
                 <td>
-                    <form>
+                    <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
                         <div>
-                             <label> First Name </label>
+                             <label> First Name </label> <label class= "validation-error hide" id="fullNameValidationError">This field is required </label>
                             <input type="text" name="firstname" id="firstname">
                         </div>
                         <div>
@@ -28,13 +29,10 @@ FORM
                         <input type="number" name="contactinfo" id="contactinfo">
 
                     </div>
-                    <div>
-                        <label> </label>
-                        <input type="submit" name="Submit">
+                    <div class="form-action-buttons">
                         
-                        
-                        
-                    </div>
+                        <button type="submit" value="Submit"> Submit </button>
+</div>
                     </form>
                 </td>
                 <td>
@@ -46,8 +44,12 @@ FORM
                                 <th>Last Name</th>
                                 <th>Email ID</th>
                                 <th>Contact info</th>
+                                <th></th>
                             </tr>
                         </thead>
+                        <tbody>
+
+                        </tbody>
                     </table>
                 </td>
             
